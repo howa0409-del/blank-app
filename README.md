@@ -1,19 +1,24 @@
-# 🎈 Blank app template
+# 🍳 大学生のズボラ飯献立ナビ
 
-A simple Streamlit app template for you to modify!
+一人暮らしの大学生をターゲットにした、冷蔵庫の余り物から簡単なレシピを提案するWebアプリです。
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+## 🔗 アプリを試す
+**[👉 こちらからアプリを使えます](https://blank-app-l3n7s7zdqd.streamlit.app/)**
 
-### How to run it on your own machine
+## 📦 機能
+* **レシピ提案機能**
+    * ユーザーが入力した食材（例：卵, キャベツ）をもとに、包丁を極力使わない簡単・安価なレシピを提案します。
+* **お気に入り保存機能**
+    * 気に入ったレシピを「お気に入り」としてデータベース（Supabase）に保存できます。
+    * 保存したレシピは「お気に入り一覧」タブからいつでも確認可能です。
 
-1. Install the requirements
+## 🛠 使用技術
+* Python
+* Streamlit
+* Supabase (PostgreSQL)
 
-   ```
-   $ pip install -r requirements.txt
-   ```
-
-2. Run the app
-
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+## 🤖 AIへの指示内容
+開発にあたり、生成AIに対して以下の指示を行いました。
+1.  **基本実装:** 「大学生向けに、工程が少なく安い料理を優先する」という条件で、Streamlitを用いたレシピ提案アプリの作成を依頼。
+2.  **DB連携:** 提案されたレシピを永続化するため、Supabaseとの接続コードとテーブル設計を依頼。
+3.  **デプロイ対応:** クラウド環境でのエラー（ModuleNotFoundError）を解決するため、`requirements.txt` の作成方法を質問。
